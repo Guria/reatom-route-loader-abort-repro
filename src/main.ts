@@ -16,7 +16,7 @@ const renderResult = (title: string, expected: string, actual: string[]) => `
 
 app.innerHTML = `
   <h1>Reatom route loader AbortError repro</h1>
-  <p>Package under test: <code>@reatom/core@1001.0.0</code></p>
+  <p>Package under test: <code>@reatom/core@1001.1.0</code></p>
   <p>
     Two focused repros:
     <br />1. <code>urlAtom.go('/a')</code> should not touch <code>b.loader</code>.

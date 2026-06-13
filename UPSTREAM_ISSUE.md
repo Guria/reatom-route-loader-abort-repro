@@ -2,7 +2,7 @@
 
 ## Summary
 
-`@reatom/core@1001.0.0` eagerly evaluates route loaders for routes that do not match the current URL.
+`@reatom/core@1001.1.0` eagerly evaluates route loaders for routes that do not match the current URL.
 
 This shows up in two places:
 
@@ -13,7 +13,7 @@ As a result, non-matching routes emit `.loader.onReject` AbortErrors with `unmat
 
 ## Why this looks like a bug
 
-The docs describe route loaders as running when the route matches and aborting when navigating away. But on `1001.0.0`, simply subscribing to `isSomeLoaderPending` or navigating to `/a` can trigger `AbortError: ... unmatch` for route `/b`.
+The docs describe route loaders as running when the route matches and aborting when navigating away. But on `1001.1.0`, simply subscribing to `isSomeLoaderPending` or navigating to `/a` can trigger `AbortError: ... unmatch` for route `/b`.
 
 That means:
 
